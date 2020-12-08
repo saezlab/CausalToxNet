@@ -1,0 +1,2 @@
+EGFR	Hypoxia	JAK.STAT	MAPK	NFkB	PI3K	TGFb	TNFa	Trail	VEGF	p53	Androgen	Estrogen	WNT
+-1	-0.9942	-0.3594	-1	-1	-1	-1	-1	0.9384	-0.08	0.9258	-0.0818	-0.1502	-0.93
