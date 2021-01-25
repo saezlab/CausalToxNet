@@ -1,16 +1,20 @@
 # Causal-Toxicity-Network (CausalToxNet) Project
 
-The CausalToxNet project's repository comprises a snapshot of codes from [CARNIVAL](https://github.com/saezlab/CARNIVAL) with associated input files applied in this project i.e. transcriptional factors weights from [DoRothEA](https://github.com/saezlab/DoRothEA) and pathway activites from [PROGENy](https://github.com/saezlab/progeny). 
+The CausalToxNet (CTN) project's repository comprises a snapshot of codes from [CARNIVAL](https://github.com/saezlab/CARNIVAL) with associated input files applied in this project i.e. transcriptional factors weights from [DoRothEA](https://github.com/saezlab/DoRothEA) and pathway activites from [PROGENy](https://github.com/saezlab/progeny). 
 
-In this repository, there are four datasets from the TG-GATEs database which were analyzed including:
-1) **RLR** - rat liver repeated dosing (4,8,15,29 days)
-2) **RLS** - rat liver single dosing (3,6,9,24 hours)
-3) **RPH** - rat primary hepatocytes (2,8,24 hours)
-4) **PHH** - primary human hepatocytes (2,8,24 hours)
+In this repository, there are two folders:
+- **"CARNIVAL_Raw_Results"** stores the already generated CARNIVAL results which are presented in the manuscript.
+- **"CARNIVAL_Scripts"** contains computational scripts to re-generate CARNIVAL results. Within this folder, the pipeline were separated for each of the four datasets from the TG-GATEs database which were analyzed including:
+1) **RLR** - rat liver repeated dosing (4,8,15,29 days at low/middle/high doses)
+2) **RLS** - rat liver single dosing (3,6,9,24 hours at low/middle/high doses)
+3) **RPH** - rat primary hepatocytes (2,8,24 hours at low/middle/high doses)
+4) **PHH** - primary human hepatocytes (2,8,24 hours at low/middle/high doses)
 
 Within each folder, the customized CARNIVAL scripts for each dataset are stored in the folders started with "CARNIVAL" while the input files for CARNIVAL are stored in the folders "Resources".
 
-In additional, each folder contain a "driver script" where users could re-run the pipeline to generate results as presented in the published article. **Note**: Please change the file path towards cplex interactive solver in the driver script before running throught the pipeline respectively. For more information on CARNIVAL, please refer to the CARNIVAL GitHub page: [https://github.com/saezlab/CARNIVAL](https://github.com/saezlab/CARNIVAL).
+In addition, each folder contain a "driver script" where users could re-run the pipeline to generate results as presented in the published article. In the provided script, only a single experimental condition (i.e. a combination of compound, time point and dose  e.g. "acetaminophen, 2 hours, low dose") was assigned in the default setting. Users can change the experimental condition by modifying the counter numbers ('counter_cp' for compound; 'counter_tp' for time point; and 'counter_do' for dose) which could be assigned for parallel computing on computational clusters.
+
+**Important note**: Please change the working directory as well as the file path towards cplex interactive solver in the driver script before running throught the pipeline respectively. For more information on CARNIVAL, please refer to the CARNIVAL GitHub page: [https://github.com/saezlab/CARNIVAL](https://github.com/saezlab/CARNIVAL).
 
 ## Author
 

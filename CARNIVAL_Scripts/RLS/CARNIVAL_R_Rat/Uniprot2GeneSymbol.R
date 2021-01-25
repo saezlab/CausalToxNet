@@ -11,7 +11,7 @@
 Uniprot2GeneSymbol <- function(res){
 
   # Select mapping file
-  IDmap <- read.table(file = system.file("HUMAN_9606_idmapping_onlyGeneName.dat",package="CARNIVAL"),header = F,sep = "\t",stringsAsFactors = F)
+  IDmap <- read.table(file = "Resources/HUMAN_9606_idmapping_onlyGeneName.dat",header = F,sep = "\t",stringsAsFactors = F)
 
   # Map each element in 'res' -> always take the first ID if there are many hit entries and collect unmapped nodes
   Unmapped <- NULL

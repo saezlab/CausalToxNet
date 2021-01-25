@@ -3,6 +3,9 @@
 # Clean workspace
 rm(list=ls());cat("\014");if(length(dev.list())>0){dev.off()}
 
+# Set working directory
+setwd("CausalToxNet/CARNIVAL_Scripts/PHH/")
+
 # TG-GATEs datasets to include
 Compounds <- c("acetaminophen","colchicine","captopril","methapyrilene","nitrofurantoin")
 # Compounds <- c("carbon.tetrachloride","n.nitrosomorpholine")
@@ -10,7 +13,7 @@ TimePoints <- c(2,8,24)
 Doses <- c('Low','Middle','High')
 
 # Load library and settings
-library(CARNIVAL)
+# library(CARNIVAL)
 DRTconf <- "ABC"
 TopDRT <- 50
 options("scipen" = 5) # to print the full number (not as exponent - needed for writing IP constraints)
@@ -74,7 +77,7 @@ if (file.exists(paste0("Resources/inputs_CARNIVAL_DRT_",DRTconf,"_FULL_Cutoff1p5
   write.table(x = MeasMapped,file = NewMeasFileName,quote = F,sep = "\t",col.names = F,row.names = F)
   
   # Run the CARNIVAL pipeline
-  library(CARNIVAL)
+  # library(CARNIVAL)
   source("runCARNIVAL_CTN.R")
   source("writeLPFile_CTN.R")
   source("CARNIVAL_R/Source_CARNIVAL.R")

@@ -3,6 +3,9 @@
 # Clean workspace
 rm(list=ls());cat("\014");if(length(dev.list())>0){dev.off()}
 
+# Set working directory
+setwd("CausalToxNet/CARNIVAL_Scripts/RLS")
+
 # TG-GATEs datasets to include
 Compounds <- c("acetaminophen","colchicine","captopril","methapyrilene","nitrofurantoin")
 # Compounds <- c("APAP","COL","CAP","MP","NFT")
@@ -79,7 +82,7 @@ if (file.exists(paste0("Resources/inputs_CARNIVAL_DRT_",DRTconf,"_FULL_Cutoff1p5
   write.table(x = MeasMapped,file = NewMeasFileName,quote = F,sep = "\t",col.names = F,row.names = F)
   
   # Run the CARNIVAL pipeline
-  library(CARNIVAL)
+  # library(CARNIVAL)
   source("runCARNIVAL_CTN.R")
   source("writeLPFile_CTN.R")
   source("CARNIVAL_R_Rat/Source_CARNIVAL_Rat.R")
