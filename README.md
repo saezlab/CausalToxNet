@@ -4,11 +4,12 @@ The CausalToxNet (CTN) project's repository comprises a snapshot of codes from [
 
 In this repository, there are two folders:
 - **"CARNIVAL_Raw_Results"** stores the already generated CARNIVAL results which are presented in the manuscript.
-- **"CARNIVAL_Scripts"** contains computational scripts to re-generate CARNIVAL results. Within this folder, the pipeline were separated for each of the four datasets from the TG-GATEs database which were analyzed including:
+- **"CARNIVAL_Scripts"** contains computational scripts to re-generate CARNIVAL results. Within this folder, the pipeline were separated for each of the four datasets from the TG-GATEs and DrugMatrix databases which were analyzed including:
 1) **RLR** - rat liver repeated dosing (4,8,15,29 days at low/middle/high doses)
 2) **RLS** - rat liver single dosing (3,6,9,24 hours at low/middle/high doses)
 3) **RPH** - rat primary hepatocytes (2,8,24 hours at low/middle/high doses)
 4) **PHH** - primary human hepatocytes (2,8,24 hours at low/middle/high doses)
+5) **DrugMatrix** - rat liver single and repeated dosing (6 hours, 24 hours, 3 days and 7 days at 400 and 1175 mg/kg for carbon tetrachloride) and rat primary hepatocytes (16 hours at 775 mg/kg, 24 hours at 193.7, 387.5 and 775 mg/kg for carbon tetrachloride; 16 hours and 24 hours at 333 mg/kg for monocrotaline)
 
 Within each folder, the customized CARNIVAL scripts for each dataset are stored in the folders started with "CARNIVAL" while the input files for CARNIVAL are stored in the folders "Resources".
 
